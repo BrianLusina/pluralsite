@@ -3,12 +3,13 @@
  * @notes: App component
  */
 import React, { Component, PropTypes } from 'react';
+import Header from './common/Header';
 
 export default class App extends Component{
   render(){
     return(
       <div className="container-fluid">
-        <header>Header comes here...</header>
+        <Header/>
         {this.props.children}
       </div>
     );
