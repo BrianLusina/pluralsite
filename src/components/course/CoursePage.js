@@ -7,6 +7,7 @@ import React, { Component, PropTypes} from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as courseActions from '../../actions/courseActions';
+import CourseList from './CourseList';
 
 
 class CoursePage extends Component{
@@ -51,22 +52,11 @@ class CoursePage extends Component{
   }
 
   render(){
+    const { courses} = this.props;
     return(
       <div>
         <h1>Courses</h1>
-        {this.props.courses.map(this.courseRow)}
-        <h2>Add course</h2>
-        <input
-          type="text"
-          onChange={this.onTitleChange}
-          value={this.state.course.title}
-        />
-
-        <input
-          type="submit"
-          value="Save"
-          onClick={this.onClickSave}
-        />
+        <CourseList courses={courses}/>
       </div>
     );
   }
