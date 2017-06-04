@@ -5,9 +5,18 @@ import routes from './routes';
 import { Router, browserHistory } from 'react-router';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './styles/index.css';
+import { Provider } from 'react-redux';
+import configureStore from './store/configureStore';
+
+/**
+ * initialize the store
+ * */
+const store = configureStore();
 
 render(
-  <Router history={browserHistory} routes={routes}/>,
+  <Provider store={store}>
+    <Router history={browserHistory} routes={routes}/>
+  </Provider>,
   document.getElementById("app")
 );
 
