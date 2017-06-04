@@ -17,26 +17,6 @@ export default class CoursePage extends Component{
     this.onTitleChange = this.onTitleChange.bind(this);
   }
 
-  render(){
-    return(
-      <div>
-        <h1>Courses</h1>
-        <h2>Add course</h2>
-        <input
-          type="text"
-          onChange={this.onTitleChange}
-          value={this.state.course.title}
-        />
-
-        <input
-          type="submit"
-          value="Save"
-          onClick={this.onClickSave}
-        />
-      </div>
-    );
-  }
-
   /**
    * Changes the title of the course, this updates the state of this component
    * @param {object} event object we shall use to derive data from element
@@ -58,6 +38,25 @@ export default class CoursePage extends Component{
     alert(`saving title ${this.state.course.title}`);
   }
 
+  render(){
+    return(
+      <div>
+        <h1>Courses</h1>
+        <h2>Add course</h2>
+        <input
+          type="text"
+          onChange={this.onTitleChange}
+          value={this.state.course.title}
+        />
+
+        <input
+          type="submit"
+          value="Save"
+          onClick={this.onClickSave}
+        />
+      </div>
+    );
+  }
 }
 
 CoursePage.propTypes = {

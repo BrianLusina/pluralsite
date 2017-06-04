@@ -13,8 +13,7 @@ export default class HomePage extends Component{
       <div className="jumbotron">
         <h1>PluralVision</h1>
         <p>PluralVision Demo</p>
-        <Link to="about" className="btn btn-primary btn-lg"
-              onlyActiveOnIndex="onlyActiveOnIndex">Learn More</Link>
+        <Link to="about" className="btn btn-primary btn-lg">Learn More</Link>
       </div>
     );
   }
