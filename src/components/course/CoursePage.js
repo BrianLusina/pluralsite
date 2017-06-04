@@ -10,9 +10,11 @@ export default class CoursePage extends Component{
     super(props, context);
 
     this.state = {
-      course: {title: null}
+      course: {title: ""}
     };
 
+    this.onClickSave = this.onClickSave.bind(this);
+    this.onTitleChange = this.onTitleChange.bind(this);
   }
 
   render(){
@@ -53,8 +55,7 @@ export default class CoursePage extends Component{
    * @param {object} event*/
   onClickSave(event){
     event.preventDefault();
-    alert("saving")
-
+    alert(`saving title ${this.state.course.title}`);
   }
 
 }
