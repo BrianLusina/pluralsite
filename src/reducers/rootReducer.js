@@ -4,14 +4,14 @@
  */
 
 import { combineReducers } from 'redux';
-import course from './courseReducer';
+import courses from './courseReducer';
 
 /**
  * Combines all reducers for use in the application
  * Uses short hand property names from ES6
  * */
 const rootReducer = combineReducers({
-  course
+  courses
 });
 
 export default rootReducer;

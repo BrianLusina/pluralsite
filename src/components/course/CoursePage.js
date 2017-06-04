@@ -1,6 +1,6 @@
 /**
  * @author lusinabrian on 30/05/17.
- * @notes: Course page
+ * @notes: Course page component
  */
 
 import React, { Component, PropTypes} from 'react';
@@ -78,9 +78,9 @@ CoursePage.propTypes = {
 
 /**
  * Maps state of props in this component to store of component
- * @param ownProps
+ * @param ownProps this components own props
  * @param state within redux store
- * @return {Object}
+ * @return {Object} props to be used in this component
  * */
 function mapStateToProps(state, ownProps){
   return {
@@ -90,12 +90,13 @@ function mapStateToProps(state, ownProps){
 
 /**
  * Fires actions to redux store
- *
+ * This will be used to fire an action to the redux store
  * */
 // function mapDispatchToProps(){
 //
 // }
 
 /**
- * Connect*/
+ * Connect this component to the store and map its props to the state of the store
+ * */
 export default connect(mapStateToProps /*,mapDispatchToProps*/)(CoursePage);
