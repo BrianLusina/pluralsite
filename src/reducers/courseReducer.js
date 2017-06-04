@@ -2,6 +2,7 @@
  * @author lusinabrian on 04/06/17.
  * @notes: Course reducer
  */
+import * as types from '../constants/actionTypes';
 
 /**
  * course reducer takes current state and action and returns a new state
@@ -10,7 +11,7 @@
  * @return {Object} new state or initial state*/
 export default function courseReducer(state = [], action){
   switch (action.type){
-    case "CREATE_COURSE":
+    case types.CREATE_COURSE:
       return [...state, Object.assign({}, action.course)
       ];
     default:

@@ -5,6 +5,7 @@
 
 import React, { Component, PropTypes} from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import * as courseActions from '../../actions/courseActions';
 
 
@@ -38,7 +39,7 @@ class CoursePage extends Component{
    * @param {object} event*/
   onClickSave(event){
     event.preventDefault();
-    this.props.dispatch(courseActions.createCourse(this.state.course));
+    this.props.actions.createCourse(this.state.course);
   }
 
   courseRow(course, index){
@@ -72,7 +73,7 @@ class CoursePage extends Component{
 }
 
 CoursePage.propTypes = {
-  dispatch: PropTypes.func.isRequired,
+  actions: PropTypes.object.isRequired,
   courses: PropTypes.array.isRequired
 };
 
@@ -91,12 +92,15 @@ function mapStateToProps(state, ownProps){
 /**
  * Fires actions to redux store
  * This will be used to fire an action to the redux store
+ * @param dispatch
  * */
-// function mapDispatchToProps(){
-//
-// }
+function mapDispatchToProps(dispatch){
+  return{
+    actions: bindActionCreators(courseActions, dispatch)
+  };
+}
 
 /**
  * Connect this component to the store and map its props to the state of the store
  * */
-export default connect(mapStateToProps /*,mapDispatchToProps*/)(CoursePage);
+export default connect(mapStateToProps ,mapDispatchToProps)(CoursePage);
