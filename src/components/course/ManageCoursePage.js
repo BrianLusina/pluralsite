@@ -11,15 +11,30 @@ class ManageCoursePage extends Component {
       course: Object.assign({}, props.course),
       errors: {}
     };
+
+    this.updateCourseState = this.updateCourseState.bind(this)
+  }
+
+  /**
+   * Updates course state
+   * @param event
+   * */
+  updateCourseState(event){
+    const field = event.target.name;
+    let course = this.state.course;
+    course[field] = event.target.value;
+    return this.setState({
+      course: course
+    });
   }
 
   render() {
     return (
       <CourseForm
-        allAuthors={[]}
+        allAuthors={this.props.authors}
         course={this.state.course}
         onSave=""
-        onChange=""
+        onChange={this.updateCourseState}
         errors={this.state.errors}
       />
     );
@@ -27,13 +42,22 @@ class ManageCoursePage extends Component {
 }
 
 ManageCoursePage.propTypes = {
-  course: PropTypes.object.isRequired
+  course: PropTypes.object.isRequired,
+  authors: PropTypes.array.isRequired
 };
 
 function mapStateToProps(state, ownProps) {
 
+  const authorsFormattedDropDown = state.authors.map(author => {
+    return {
+      value: author.id,
+      text: author.firstName + " " + author.lastName
+    };
+  });
+
   return {
-    course: state
+    course: state,
+    authors: authorsFormattedDropDown
   };
 }
 

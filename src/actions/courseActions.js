@@ -14,6 +14,20 @@ export function loadCoursesSuccess(courses){
 }
 
 /**
+ * Action to create course
+ * */
+export function createCourseSuccess(course){
+  return {type: types.CREATE_COURSE_SUCCESS, course};
+}
+
+/**
+ * Action to update course
+ * */
+export function updateCourseSuccess(course){
+  return { type: types.UPDATE_COURSE_SUCCESS, course};
+}
+
+/**
  * Load courses from api
  * */
 export function loadCourses(){
@@ -23,5 +37,25 @@ export function loadCourses(){
    }).catch(error => {
      throw(error);
    });
+  };
+}
+
+/**
+ * Saves course to api
+ * @param course to save to api
+ * @return function
+ * */
+export function saveCourse(course){
+
+  /**
+   * getState is for accessing redux store directly
+   * */
+  return function (dispatch, getState) {
+    return courseApi.saveCourse(course).then(savedCourse => {
+      course.id ? dispatch(updateCourseSuccess(savedCourse)) :
+        dispatch(createCourseSuccess(savedCourse));
+    }).catch(error => {
+      throw error;
+    });
   };
 }
