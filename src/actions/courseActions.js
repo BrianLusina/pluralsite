@@ -9,7 +9,7 @@ import courseApi from '../api/mockCourseApi';
  * Action to creates a course
  * @param courses
  * @returns {object} returns an object*/
-export function createCourse(courses){
+export function loadCoursesSuccess(courses){
   return { type: types.LOAD_COURSES_SUCCESS, courses};
 }
 
@@ -19,7 +19,7 @@ export function createCourse(courses){
 export function loadCourses(){
   return function (dispatch) {
    return courseApi.getAllCourses().then(courses => {
-     //dispatch(loadCoursesSuccess(courses));
+     dispatch(loadCoursesSuccess(courses));
    }).catch(error => {
      throw(error);
    });

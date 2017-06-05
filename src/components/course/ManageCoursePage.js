@@ -17,7 +17,9 @@ class ManageCoursePage extends Component {
     return (
       <CourseForm
         allAuthors={[]}
-        course={this.state.course} onSave="" onChange=""
+        course={this.state.course}
+        onSave=""
+        onChange=""
         errors={this.state.errors}
       />
     );
