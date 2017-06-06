@@ -5,8 +5,9 @@ import * as courseActions from '../../actions/courseActions';
 import CourseForm from './CourseForm';
 import toastr from 'toastr';
 
-
-class ManageCoursePage extends Component {
+/**
+ * keyword */
+export class ManageCoursePage extends Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
@@ -18,6 +19,7 @@ class ManageCoursePage extends Component {
     this.updateCourseState = this.updateCourseState.bind(this);
     this.saveCourse = this.saveCourse.bind(this);
     this.redirect = this.redirect.bind(this);
+    this.courseFormValid = this.courseFormValid.bind(this);
   }
 
   /**
@@ -33,6 +35,23 @@ class ManageCoursePage extends Component {
     });
   }
 
+  /**
+   * Validates if cours is valid*/
+  courseFormValid(){
+    let formIsValid = true;
+    let errors = {};
+
+    if(this.state.course.title.length < 5){
+      errors.title = "Title must be at least 5 characters";
+      formIsValid = false;
+    }
+
+    this.setState({
+      errors
+    });
+
+    return formIsValid;
+  }
   /**
    * Saves a course
    * */
