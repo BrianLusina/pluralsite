@@ -8,7 +8,7 @@ import './styles/index.css';
 import { Provider } from 'react-redux';
 import { loadCourses } from './actions/courseActions';
 import { loadAuthors} from './actions/authorActions';
-import configureStore from './store/configureStore';
+import configureStore from './store/configureStore.dev';
 import "../node_modules/toastr/build/toastr.min.css";
 
 /**
