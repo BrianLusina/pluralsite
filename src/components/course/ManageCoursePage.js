@@ -6,7 +6,9 @@ import CourseForm from './CourseForm';
 import toastr from 'toastr';
 
 /**
- * keyword */
+ * keyword export is to allow exporting this raw component
+ * without setting up provider and store from redux
+ * */
 export class ManageCoursePage extends Component {
   constructor(props, context) {
     super(props, context);
