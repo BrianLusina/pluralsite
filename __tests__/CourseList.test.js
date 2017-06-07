@@ -19,4 +19,8 @@ describe("CourseList should", () => {
         expect(wrapper.find("table").length).toBe(1);
     });
 
+    it("", ()=>{
+
+    });
+
 });
