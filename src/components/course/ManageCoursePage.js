@@ -4,7 +4,7 @@ import {bindActionCreators} from 'redux';
 import * as courseActions from '../../actions/courseActions';
 import CourseForm from './CourseForm';
 import toastr from 'toastr';
-
+import {authorsFormattedDropDown } from '../../selectors/selectors';
 /**
  * keyword export is to allow exporting this raw component
  * without setting up provider and store from redux
@@ -137,16 +137,9 @@ function mapStateToProps(state, ownProps) {
     course = getCourseById(state.courses, courseId);
   }
 
-  const authorsFormattedDropDown = state.authors.map(author => {
-    return {
-      value: author.id,
-      text: author.firstName + " " + author.lastName
-    };
-  });
-
   return {
     course: state,
-    authors: authorsFormattedDropDown
+    authors: authorsFormattedDropDown(state.authors)
   };
 }
 
