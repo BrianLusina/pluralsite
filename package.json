@@ -33,7 +33,7 @@
     "redux": "3.5.2",
     "redux-thunk": "2.0.1",
     "toastr": "2.1.2",
-    "snyk": "^1.306.0"
+    "snyk": "^1.317.0"
   },
   "devDependencies": {
     "babel-cli": "6.9.0",
@@ -71,7 +71,7 @@
     "rimraf": "2.5.2",
     "style-loader": "0.13.1",
     "url-loader": "0.6.0",
-    "webpack": "2.2.0",
+    "webpack": "4.0.0",
     "webpack-dev-middleware": "1.6.1",
     "webpack-hot-middleware": "2.10.0"
   },
