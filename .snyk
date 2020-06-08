@@ -338,3 +338,5 @@ patch:
         patched: '2020-05-04T10:55:55.081Z'
     - babel-register > babel-core > babel-register > babel-core > babel-helpers > babel-template > babel-traverse > babel-types > lodash:
         patched: '2020-05-04T10:55:55.081Z'
+    - enzyme > cheerio > lodash:
+        patched: '2020-06-08T06:20:42.972Z'
