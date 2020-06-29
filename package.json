@@ -63,7 +63,7 @@
     "mocha": "6.2.3",
     "nock": "8.0.0",
     "npm-run-all": "1.8.0",
-    "open": "6.0.0",
+    "open": "6.4.0",
     "react-addons-test-utils": "15.6.2",
     "redux-devtools-extension": "^2.13.8",
     "redux-immutable-state-invariant": "1.2.3",
