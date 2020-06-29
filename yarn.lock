@@ -6252,9 +6252,10 @@ react-redux@4.4.5:
     lodash "^4.2.0"
     loose-envify "^1.1.0"
 
-react-router-redux@4.0.4:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/react-router-redux/-/react-router-redux-4.0.4.tgz#335c7e50a12f67794c3d51a4630a444fa691c7e5"
+react-router-redux@4.0.8:
+  version "4.0.8"
+  resolved "https://registry.yarnpkg.com/react-router-redux/-/react-router-redux-4.0.8.tgz#227403596b5151e182377dab835b5d45f0f8054e"
+  integrity sha1-InQDWWtRUeGCN32rg1tdRfD4BU4=
 
 react-router@2.4.0:
   version "2.4.0"
