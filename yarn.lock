@@ -6986,9 +6986,10 @@ redux-devtools-extension@^2.13.8:
   resolved "https://registry.yarnpkg.com/redux-devtools-extension/-/redux-devtools-extension-2.13.8.tgz#37b982688626e5e4993ff87220c9bbb7cd2d96e1"
   integrity sha512-8qlpooP2QqPtZHQZRhx3x3OP5skEV1py/zUdMY28WNAocbafxdG2tRD1MWE7sp8obGMNYuLWanhhQ7EQvT1FBg==
 
-redux-immutable-state-invariant@1.2.3:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/redux-immutable-state-invariant/-/redux-immutable-state-invariant-1.2.3.tgz#d8df01c2f38ab5df1f434cd2613b5e8c4e9f9d83"
+redux-immutable-state-invariant@1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/redux-immutable-state-invariant/-/redux-immutable-state-invariant-1.2.4.tgz#e8bc4a37e22815375d5a04f8ecbb807054ea8bbb"
+  integrity sha1-6LxKN+IoFTddWgT47LuAcFTqi7s=
   dependencies:
     invariant "^2.1.0"
     json-stringify-safe "^5.0.1"
