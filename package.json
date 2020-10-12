@@ -33,7 +33,7 @@
     "redux": "3.7.2",
     "redux-thunk": "2.3.0",
     "toastr": "2.1.4",
-    "snyk": "^1.406.0"
+    "snyk": "^1.413.2"
   },
   "devDependencies": {
     "babel-cli": "6.9.0",
