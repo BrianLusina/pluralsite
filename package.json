@@ -33,10 +33,10 @@
     "redux": "3.7.2",
     "redux-thunk": "2.3.0",
     "toastr": "2.1.4",
-    "snyk": "^1.437.3"
+    "snyk": "^1.465.0"
   },
   "devDependencies": {
-    "babel-cli": "6.9.0",
+    "babel-cli": "6.18.0",
     "babel-core": "6.10.4",
     "babel-loader": "6.4.1",
     "babel-plugin-react-display-name": "2.0.0",
